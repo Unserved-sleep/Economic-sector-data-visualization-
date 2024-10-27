@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styles */
+.header {
+  background-color: #2196F3;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: static; /* Static positioning */
+}
+
+.site-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  flex-grow: 1; /* Makes sure the title is on the left */
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.login, .signup {
+  width: 80px;
+  height: 40px;
+  padding: 10px;
+  background-color: #4CAF50;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.login:hover, .signup:hover {
+  background-color: #45a049;
+  transform: scale(1.1); /* Improved hover effect */
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 200px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  position: fixed;
+  top: 70px; /* Offset for the header */
+  left: 0;
+  height: 100vh;
+}
+
+.sidebar img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+}
+
+.sidebar nav ul li {
+  margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.sidebar nav ul li a:hover{
+  transform: scale(1.1);
+  color: orangered;
+}
+
+/* Main content styles */
+main {
+  margin-left: 220px; /* Offset for the sidebar */
+  padding: 20px;
+  padding-top: 70px; /* Offset for fixed header */
+}
+
+main h2 {
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 20px;
+}
+
+.courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 courses per row */
+  gap: 20px;
+}
+
+.course {
+  background-color: #e9e9e9;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.course h3 {
+  margin-bottom: 10px;
+}
+
+.course p {
+  font-size: 1.2rem;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .courses {
+    grid-template-columns: repeat(2, 1fr); /* 2 courses per row on smaller screens */
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .courses {
+    grid-template-columns: 1fr; /* 1 course per row on mobile */
+  }
+}
+
+
+a {
+  text-decoration: none; /* Removes the underline */
+  color: black; /* Sets the text color to black */
+}
+
+a:hover{
+  color:orangered;
+  transform: scale(1.1);
+}
